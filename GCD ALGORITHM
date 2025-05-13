@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+    int a,b,r,q;
+    printf("Enter two numbers to find GCD: ");
+    scanf("%d%d",&a,&b);
+    while(b !=0)
+    {
+        r=a%b;
+        q=a/b;
+        a=b;
+        b=r;
+    }
+    printf("\n GCD is %d",a);
+    return 0;
+}
