@@ -1,0 +1,23 @@
+#include<stdio.h>
+ void prime(int n)
+ {
+ 	if(n==1)
+ 	{
+ 		return;
+	 }
+	 int i=2;
+	 while(n%i !=0){
+	 	i++;
+	 }
+	 printf("%d ",i);
+	 prime(n/i);
+ }
+ 
+ int main()
+ {
+ 	int n;
+ 	printf("enter number to find prime factorization: ");
+ 	scanf("%d",&n);
+ 	printf("\n");
+ 	prime(n);
+ }
