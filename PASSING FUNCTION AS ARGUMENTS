@@ -1,0 +1,20 @@
+#include<stdio.h>
+int squ(int n){
+	return n*n;
+}
+int sum(int (*squ)(int), int num)
+{
+	int t=0;
+	for(int i=1;i<=num;i++){
+		
+		t = t+squ(i);
+	}
+	printf("\n total=%d",t);
+}
+void main()
+{
+	int num;
+	printf("enter number: ");
+	scanf("%d",&num);
+	sum(squ,num);
+}            
